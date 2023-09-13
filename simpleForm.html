@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Basic Input Types</title>
+        <link rel="stylesheet" href="D:\New Batch\BridgeLabz_Java_Day42_HTMLinputForms_MediaQueries\cssFile\simpleForm.css">
+    </head>
+    <body>
+        <form>
+            <header class="headerContainer"><h1>HTML 5 Form Input Fields</HTML:5></h1></header>
+            <div>
+                <label for="text">text input type for Name: </label>
+                <input type="text" id="text" name="text" required>
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+			<br>
+            <div>
+                <label for="pwd">password input type: </label>
+                <input type="password" id="pwd" name="pwd" required>
+                <error-output class="pwd-error" for="pwd"></error-output>
+            </div>
+			<br>
+            <div>
+                <label for="email">email input type: </label>
+                <input type="email" id="email" name="email" required>
+                <error-output class="email-error" for="email"></error-output>
+            </div>
+			<br>
+            <div>
+                <label for="url">url input type: </label>
+                <input type="url" id="url" name="url">
+            </div>
+			<br>
+            <div>
+                <label for="number">number input type: </label>
+                <input type="number" id="number" name="number" required>
+                <error-output class="number-error" for="number"></error-output>
+            </div>
+			<br>
+            <div>
+                <label for="tel">tel input type: </label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+			<br>
+            <div>
+                <label for="search">search input type: </label>
+                <input type="search" id="search" name="search">
+            </div>
+			<br>
+            <div class="nativeDateTimePicker">
+                <label for="party">Choose a Date and Time</label>
+                <input type="datetime-local" id="party" name="bday">
+                <span class="validity"></span>
+            </div>
+			<br>
+			<div>
+                <label for="income">Income Input field Salary</label>
+                <input type="range" name="income" id="income"
+                min="2000000" max="4500000" step="10000" value="3500000">
+                <output class="income-output" for="income">3200000</output>
+            </div>
+           <br>
+		    <div>
+                <button>Submit</button>
+            </div>
+
+         </form>
+        <script>
+            let income = document.querySelector('#income');
+            let output = document.querySelector('.income-output');
+            output.textContent = income.value;
+            income.addEventListener('input',function(){
+                output.textContent = income.value;
+            });
+			</script>
+
+       </body>
+</html>
